@@ -331,7 +331,7 @@ h2 {
 blockquote {
   position: relative;
   margin: 30px 0;
-  padding: 24px 21px;
+  padding: 48px 21px 24px;
   border-block: 1px solid rgba(69, 31, 5, 0.18);
   color: var(--brown);
   text-align: center;
