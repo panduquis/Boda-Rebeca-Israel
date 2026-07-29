@@ -168,7 +168,8 @@ h2 {
   width: calc(100% - 16px);
   height: calc(100% - 10px);
   inset: 5px 8px;
-  object-fit: fill;
+  object-fit: contain;
+  object-position: center;
   pointer-events: none;
 }
 
