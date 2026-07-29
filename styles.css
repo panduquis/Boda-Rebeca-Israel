@@ -340,13 +340,16 @@ blockquote {
 blockquote::before {
   content: "“";
   position: absolute;
-  top: -24px;
+  top: -27px;
   left: 50%;
-  padding-inline: 12px;
+  width: 54px;
+  padding: 0 8px;
   background: var(--paper);
   color: var(--terracotta);
   font-family: var(--serif);
   font-size: 3rem;
+  line-height: 1;
+  text-align: center;
   transform: translateX(-50%);
 }
 
