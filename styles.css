@@ -229,9 +229,12 @@ h2 {
 }
 
 .hero__flowers {
-  width: min(72%, 245px);
-  margin: 17px auto 4px;
-  filter: drop-shadow(0 10px 15px rgba(69, 31, 5, 0.08));
+  width: min(48%, 190px);
+  max-height: 205px;
+  margin: 17px auto 0;
+  object-fit: contain;
+  transform: translateY(-6px);
+  filter: drop-shadow(0 8px 12px rgba(69, 31, 5, 0.08));
 }
 
 .scroll-cue {
