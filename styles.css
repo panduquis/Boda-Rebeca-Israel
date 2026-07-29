@@ -852,3 +852,33 @@ details img {
     animation: none;
   }
 }
+
+/* NUESTRA BODA CIVIL */
+.hero .overline {
+  font-family: "Cinzel", serif;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.24em;
+}
+
+/* I & R */
+.hero .monogram {
+  font-family: "Great Vibes", cursive;
+  font-size: 3.5rem;
+  font-style: normal;
+  line-height: 1;
+}
+
+/* ISRAEL Y REBECA */
+.hero h1 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(3.4rem, 17vw, 5.3rem);
+  font-weight: 600;
+  line-height: 0.72;
+}
+
+/* EL & QUE ESTÁ ENTRE LOS NOMBRES */
+.hero h1 span {
+  font-family: "Great Vibes", cursive;
+  font-weight: 400;
+}
