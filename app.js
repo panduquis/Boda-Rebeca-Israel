@@ -64,4 +64,61 @@
 
     revealElements.forEach((element) => observer.observe(element));
   }
+  const storyMusic = document.getElementById("storyMusic");
+const storyMusicButton = document.getElementById("storyMusicButton");
+const storyMusicStatus = document.getElementById("storyMusicStatus");
+
+let storyMusicWasPlayed = false;
+
+if (storyMusic && storyMusicButton && storyMusicStatus) {
+  storyMusicButton.addEventListener("click", async () => {
+    if (storyMusicWasPlayed) {
+      return;
+    }
+
+    try {
+      storyMusic.currentTime = 0;
+
+      await storyMusic.play();
+
+      storyMusicWasPlayed = true;
+      storyMusicButton.disabled = true;
+      storyMusicButton.classList.add("is-playing");
+      storyMusicButton.innerHTML =
+        '<span aria-hidden="true">♪</span> Reproduciendo…';
+
+      storyMusicStatus.textContent =
+        "Escuchando una canción que forma parte de nuestra historia";
+    } catch (error) {
+      console.error("Error al reproducir el audio:", error);
+
+      storyMusicButton.disabled = false;
+      storyMusicButton.classList.remove("is-playing");
+      storyMusicButton.innerHTML =
+        '<span aria-hidden="true">♫</span> Escuchar nuestra canción';
+
+      storyMusicStatus.textContent =
+        "No fue posible reproducir el audio. Intenta nuevamente.";
+    }
+  });
+
+  storyMusic.addEventListener("ended", () => {
+    storyMusicButton.classList.remove("is-playing");
+    storyMusicButton.innerHTML =
+      '<span aria-hidden="true">♡</span> Gracias por escuchar';
+
+    storyMusicStatus.textContent =
+      "Una canción que forma parte de nuestra historia";
+  });
+
+  storyMusic.addEventListener("error", () => {
+    storyMusicButton.disabled = false;
+    storyMusicButton.innerHTML =
+      '<span aria-hidden="true">♫</span> Audio no disponible';
+
+    storyMusicStatus.textContent =
+      "Revisa que nuestra-cancion.mp3 esté correctamente publicado.";
+  });
+}
+   const storyMusic = document.getElementById("storyMusic");
 })();
