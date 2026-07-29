@@ -922,7 +922,7 @@ details img {
   position: absolute;
   z-index: 1;
 
-  top: 20%;
+  top: 10%;
   left: 50%;
 
   width: min(70%, 345px);
