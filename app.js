@@ -120,5 +120,5 @@ if (storyMusic && storyMusicButton && storyMusicStatus) {
       "Revisa que nuestra-cancion.mp3 esté correctamente publicado.";
   });
 }
-   const storyMusic = document.getElementById("storyMusic");
+
 })();
