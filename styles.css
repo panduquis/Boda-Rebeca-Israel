@@ -977,3 +977,88 @@ details img {
   font-size: 0.96rem;
   line-height: 1.65;
 }
+
+/* BOTÓN DESTACADO DE NUESTRA CANCIÓN */
+
+.story-music {
+  display: grid;
+  justify-items: center;
+  gap: 12px;
+  margin: 18px 0 42px;
+  text-align: center;
+}
+
+.story-music__button {
+  display: inline-flex;
+  width: min(100%, 340px);
+  min-height: 68px;
+  align-items: center;
+  justify-content: center;
+  gap: 13px;
+  padding: 12px 28px;
+
+  border: 2px solid var(--brown);
+  border-radius: 999px;
+  background: var(--brown);
+  color: var(--cream);
+
+  cursor: pointer;
+  font-family: var(--serif);
+  font-size: 1.15rem;
+  font-weight: 700;
+  line-height: 1.2;
+  text-align: center;
+
+  box-shadow:
+    0 12px 28px rgba(69, 31, 5, 0.18),
+    0 0 0 6px rgba(69, 31, 5, 0.05);
+
+  transition:
+    transform 180ms ease,
+    box-shadow 180ms ease,
+    background 180ms ease;
+}
+
+.story-music__button span {
+  font-size: 1.6rem;
+}
+
+.story-music__button:hover {
+  transform: translateY(-3px) scale(1.02);
+
+  box-shadow:
+    0 16px 34px rgba(69, 31, 5, 0.24),
+    0 0 0 8px rgba(69, 31, 5, 0.07);
+}
+
+/* Movimiento suave para llamar la atención antes de reproducir */
+.story-music__button:not(.is-playing):not(:disabled) {
+  animation: music-attention 2.2s ease-in-out infinite;
+}
+
+.story-music__button.is-playing {
+  animation: none;
+  background: var(--terracotta);
+  border-color: var(--terracotta);
+}
+
+.story-music__status {
+  max-width: 310px;
+  margin: 0;
+  color: var(--brown-soft);
+  font-family: var(--serif);
+  font-size: 0.86rem;
+  font-style: italic;
+  line-height: 1.5;
+}
+
+@keyframes music-attention {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.035);
+  }
+}
